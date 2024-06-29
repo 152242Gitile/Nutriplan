@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRIPLAN</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>NUTRIPLAN</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2>Welcome to Fitness & Wellness</h2>
+            <p>Your journey to a healthier life starts here.</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Fitness & Wellness, we are dedicated to helping you achieve your health and fitness goals. Our team of experienced trainers and nutritionists are here to provide personalized plans that suit your lifestyle.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Personal Training</h3>
+                    <p>Get one-on-one training with our certified trainers to reach your fitness goals.</p>
+                </div>
+                <div class="service">
+                    <h3>Nutrition Planning</h3>
+                    <p>Our nutritionists will help you develop a diet plan tailored to your needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Group Classes</h3>
+                    <p>Join our group classes for a fun and motivating workout experience.</p>
+                </div>
+                <div class="service">
+                    <h3>Online Coaching</h3>
+                    <p>Access our expert coaching from the comfort of your home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Fitness & Wellness transformed my life. The trainers are amazing and the programs are highly effective."</p>
+                    <h4>- Jane Doe</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I've never felt healthier and more energized. The nutrition plans are easy to follow and really work."</p>
+                    <h4>- John Smith</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post" class="app">
+                <div class="inputs">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" id="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fitness & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
