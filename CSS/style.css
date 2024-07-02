@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,500;1,600;1,700;1,800&family=Poppins:wght@200;300;400;500;600&family=Rubik&display=swap');
+
+
+:root{
+    --main-color: (#868e96);
+    --orange: #ffa500;
+    --light-color: #868e96 ; 
+}
+
+
+*{
+    font-family: 'Poppins', sans-serifs;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+::selection{
+    background: var(--main-color);
+    color: #ffa500;
+}
+html{
+    font-size: 62.5%; 
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+   scroll-padding-top: 7rem; 
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #fafa;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 4rem ;
+    padding-bottom: 2rem;
+    color: var(black);
+    text-transform: uppercase;
+}
+  
+.heading span{
+    text-transform:uppercase ;
+    color: var(--main-color);
+}
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    background: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    color: orange;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: orange;
+    color:#fff;
+    letter-spacing: 1rem;
+}
+/*---------header section starts---------*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 9%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background: rgb(14, 13, 14);
+    box-shadow: 0rem .1rem .5rem #ffa500;
+    z-index: 1000;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color: rgb(117, 8, 104);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1rem ;
+}
+
+.header .logo span{
+    color:var(rgb(117, 8, 104));
+    text-transform: uppercase;
+     
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: #ffa500;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: var(orange);
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    color: #bc5811;
+    padding: .5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.header .icons div:hover{
+    transform: rotate(90deg);
+}
+.header .icons a{
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color:orange ;
+    background: var(--main-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding:  .8rem 2rem;
+    border: none;
+} 
+
+.header .icons a:hover{
+    color: var(orange);
+    background: #fff;
+}
+
+#menu-btn{
+    display: inline-block;
+}
+
+.header.active{
+    padding: 2rem 9%;
+    background: rgba(0,0,0,.9);
+}
+/*---------header section ends---------*/
+
+
+/*-----home section starts----*/
+ .home{
+    padding: 0%;
+ }
+
+ .home .home-slider .box{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-size: cover !important ;
+    background-position: cover !important;
+ }
+
+ .home .home-slider .box .content{
+    text-align: center;
+    max-width: 70rem;
+
+ }
+
+ .home .home-slider .box .content h3{
+    font-size: 5rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition-delay: .2s;
+ }
+
+ .home .home-slider .box .content p{
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 1rem 0;
+    transition-delay: .4s
+ }
+
+ .home .home-slider .box .button .btn-1{
+    background: orange;
+    color: #fff;
+    margin-right: .5rem;
+ }
+
+ .home .home-slider .box .button .btn-1.btn-1 :hover{
+    background: #fff;
+    color: orange;
+ }
+
+ .home .home-slider .box .button {
+    transition-delay: .6s ;
+ }
+
+ .home .home-slider .box .content > *{
+    transform: translateY(2rem);
+    opacity: 0;
+ }
+
+.home .home-slider .swiper-slide-active .content > *{
+    transform: translateY(0);
+    opacity: 1;
+}
+/*-----home section ends----*/
+
+/*-----feature section starts-----*/
+
+.feature .feature-slider{
+    padding-bottom: 4rem;
+}
+
+.feature .feature-slider .box{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.feature .feature-slider .box .image{
+    height: 40rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.feature .feature-slider .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.feature .feature-slider .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.feature .feature-slider .box .content{
+    padding: 1rem 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+}
+
+.feature .feature-slider .box .content h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color:#fff;
+    text-transform: uppercase;
+    background: rgba(0,0,0,.3);
+    padding: .2rem;
+    margin-top: .5rem;
+}
+
+.feature .feature-slider .box .content .intensity{
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    border-radius: 50%;
+    text-align: center;
+    margin:auto;
+    background: var(orange);
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.feature .feature-slider .box:hover .content .intensity{
+    background: none;
+    border: .3rem solid #fff;
+}
+
+
+
+
+
+
+
+
+/*-----feature section ends-----*/
+
+/*-----schedule section starts----*/
+
+.schedule{
+    background: #eee;
+}
+
+.schedule .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.schedule .box-container .box{
+    background: rgb(177, 225, 21);
+    overflow: hidden;
+}
+
+.schedule .box-container .box .content{
+    padding: 2rem;
+}
+
+.schedule .box-container .box .content h3{
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: .5rem;
+}
+
+.schedule .box-container .box .content p{
+    color:#333;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.schedule .box-container .icons{
+    padding: 0 2rem;
+}
+
+.schedule .box-container .icons span{
+    display: block;
+    font-size: 1.3rem;
+    color: #333;
+    padding: .3rem 0;
+}
+
+.schedule .box-container .icons span i{
+    margin: .5rem;
+}
+
+.schedule .box-container .box .btn{
+    margin: 1.5rem 2rem;
+    background: var(--orange);
+    color: #fff;
+}
+
+.schedule .box-container .box .btn:hover{
+    background: #ffa500;
+}
+.schedule .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-----schedule section ends----*/
+
+/*-------------------trainer section starts----------------------*/
+
+.trainers .trainer-slider{
+    padding-bottom: 4rem;
+}
+
+.trainers .trainer-slider .box{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.trainers .trainer-slider .box .image{
+    height: 40rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trainers .trainer-slider .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: center;
+}
+
+.trainers .trainer-slider .box .name{
+    padding: 2rem 0;
+}
+
+.trainers .trainer-slider .box .name h1{
+    font-size: 3rem;
+    color:#333;
+    font-weight: 600;
+}
+
+.trainers .trainer-slider .box .name p{
+    font-size: 2rem;
+    color: #868e96;
+}
+
+/*-------------------tariner section ends------------------------*/
+
+/*---------------------------footer section starts--------------------------*/
+
+.footer{
+    background: #222;
+}
+
+.footer .box-container{
+    display:grid;
+    grid-template-columns: 60rem 20rem;
+    gap:1rem ;
+}
+
+.footer .box-container .box{
+    padding: 2rem;
+}
+
+.footer .box-container .box h1{
+    font-size: 2.5rem;
+    color:#fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box .icon{
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .icon a i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: orange;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-right: 0 .5rem;
+    color: #fff;
+}
+ 
+.footer .box-container .box .icon a i:hover{
+    color:orange;
+    background: none;
+    border: .2rem solid orange;
+}
+
+.footer .box-container .box .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer .box-container .box .icons a i{
+    margin-right: .5rem;
+    color: var(--main-color);
+}
+
+.footer .box-container .box .icons a:hover i{
+    padding-right: 2rem;
+    color: #fff;
+}
+
+.footer .box-container .box .icons a:hover{
+    color: var(--main-color);
+}
+
+.footer .credit{
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid orange;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+
+/*---------------------------footer section ends--------------------------*/
+
+
+
+/*--------------------about section starts------------------------*/
+
+ 
+/*--------------------about section ends------------------------*/
+
+
+
+
+
+
+
+
+/*----------------------media queries section--------------------------*/
+
+@media(max-width:991px){
+    html{
+        font-size:  55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .header.active{
+        padding: 2rem;
+    }
+}
+
+/*------------for max-width 786px-------------*/
+
+@media(max-width:786px){
+    
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: rgba(0,0,0,.3);
+        border-top: .1rem solid #eee;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 );        
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+     
+    .feature .feature-slider .box .content h3{
+        padding: 1rem;
+    }
+}
+
+/*------------for max-width 450px----------*/
+@media(max-width:450px){
+    html{
+        font-size:  50%;
+    }
+}
