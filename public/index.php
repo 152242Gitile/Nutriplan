@@ -139,7 +139,7 @@
             </div>
             <div class="icons">
                 <span><i class="far fa-clock"></i>3:30PM</span>
-                <span><i class="far fa-calendar-alt"></i>June 16,2024</span>
+                <span><i class="far fa-calendar-alt"></i>June 14,2024</span>
             </div>
             <a href="#" class="btn">Join class</a>
         </div>
@@ -259,6 +259,21 @@
 </section>
 
 <!----------------trainer section ends------------------>
+
+<section id="profile" class="profile-section">
+    <div class="container">
+        <h2>User Profile</h2>
+        <?php if (isset($_SESSION['user'])): ?>
+            <div class="profile-info">
+                <p><strong>Name:</strong> <span id="profile-name"><?= $_SESSION['user']['name'] ?></span></p>
+                <p><strong>Email:</strong> <span id="profile-email"><?= $_SESSION['user']['email'] ?></span></p>
+                <p><strong>Joined:</strong> <span id="profile-joined"><?= $_SESSION['user']['joined'] ?></span></p>
+            </div>
+        <?php else: ?>
+            <p>Please <a href="#login">login</a> to view your profile.</p>
+        <?php endif; ?>
+    </div>
+</section>
 
 <!-------------------footer section starts-------------------->
 
